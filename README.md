@@ -47,14 +47,14 @@ Autenticação simples com JWT em Node.js usando Express.
 - Importa e usa as rotas
 - Executa na porta listening on 3000
 
-# Routes ⤵
+# Routes 
 
-## login.js ⤵
+## login.js 
 
 - Cria uma rota POST em `/login` que chama a função do controlador de login.
 - Importância: permite que usuários se autentiquem, garantindo que só pessoas autorizadas acessem informações confidenciais. Essencial para a segurança do sistema.
 
-## posts.js ⤵
+## posts.js 
 
 - Cria uma rota GET em `/posts` protegida por um middleware que valida o token antes de chamar o controlador de posts.
 - Importância: garante que apenas usuários autenticados possam acessar dados sensíveis, protegendo a privacidade e segurança das informações.
