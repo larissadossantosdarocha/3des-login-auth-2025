@@ -7,11 +7,22 @@
 </head>
 <body>
   <div class="container">
+    <!-- Parte superior com nome e ícone -->
+    <div class="header">
+      <div class="userInfo">
+        <img src="https://cdn-icons-png.flaticon.com/128/1326/1326377.png" alt="Avatar" class="avatar">
+        <span id="userName"></span>
+      </div>
+    </div>
+
     <h2>Lista de Posts</h2>
     <ul id="posts"></ul>
     <p id="message" style="color: red;"></p>
+
+    <!-- Botão de voltar no final -->
+    <button onclick="window.location.href='login.html'" id="backButton">Voltar</button>
   </div>
 
-  <script src="scripts/home.js"></script>
+  <script src="scripts/home.js"></script>  
 </body>
 </html>

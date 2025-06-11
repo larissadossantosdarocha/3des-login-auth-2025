@@ -17,7 +17,11 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
 
   if (response.ok) {
     console.log('Token recebido:', data.token);
+    
+    // Salvar token e nome do usuário no localStorage
     localStorage.setItem("token", data.token);
+    localStorage.setItem("userName", "Fulano da Silva"); // Nome do usuário, pode vir do backend
+
     window.location.href = "home.html";
   } else {
     console.log('Erro no backend:', data.message);

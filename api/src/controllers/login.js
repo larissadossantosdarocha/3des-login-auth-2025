@@ -19,7 +19,7 @@ console.log("PASSWD:", process.env.PASSWD);
         const token = jsonwebtoken.sign(
             {
                 id: crypto.randomUUID(),
-                name: "Fulano da Silva",
+                name: "Fulano da Silva                                                                                                                               a",
                 avatar: "https://cdn-icons-png.flaticon.com/128/1326/1326377.png"
             },
             process.env.SECRET_JWT,
