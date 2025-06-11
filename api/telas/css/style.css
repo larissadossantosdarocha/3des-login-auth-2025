@@ -13,7 +13,7 @@ body {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(224, 88, 88, 0.1);
     width: 80%;
     max-width: 600px;
 }
@@ -21,6 +21,11 @@ body {
 h1 {
     text-align: center;
     color: #333;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 0;
 }
 
 .form-group {
@@ -85,4 +90,3 @@ button:hover {
   margin-top: 0;
   color: #337ab7;
 }
-
