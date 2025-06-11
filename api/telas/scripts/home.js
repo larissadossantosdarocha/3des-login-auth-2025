@@ -4,13 +4,10 @@ if (!token) {
   window.location.href = "login.html";
 }
 
-// Obter o nome do usuário armazenado no localStorage
 const userName = localStorage.getItem("userName");
 
-// Exibir o nome do usuário na interface
 document.getElementById("userName").textContent = userName;
 
-// Buscando os posts
 fetch("http://localhost:4000/posts", {
   headers: {
     Authorization: `Bearer ${token}`,
@@ -38,7 +35,7 @@ fetch("http://localhost:4000/posts", {
   .catch(err => {
     document.getElementById("message").textContent = err.message;
     localStorage.removeItem("token");
-    localStorage.removeItem("userName"); // Limpar o nome do usuário
+    localStorage.removeItem("userName");
     setTimeout(() => {
       window.location.href = "login.html";
     }, 2000);

@@ -90,7 +90,7 @@ button:hover {
   margin-top: 0;
   color: #337ab7;
 }
-/* Adicionando estilo para a parte superior da página */
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -105,8 +105,8 @@ button:hover {
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 4px;
-  width: 100%; /* Faz o botão ocupar a largura total */
-  margin-top: 20px; /* Adiciona um espaço no topo para não ficar colado nos posts */
+  width: 100%; 
+  margin-top: 20px; 
 }
 
 #backButton:hover {
