@@ -4,7 +4,7 @@ if (!token) {
   window.location.href = "login.html";
 }
 
-fetch("http://localhost:3000/posts", {
+fetch("http://localhost:4000/posts", {
   headers: {
     Authorization: `Bearer ${token}`,
   },
@@ -19,7 +19,12 @@ fetch("http://localhost:3000/posts", {
     const ul = document.getElementById("posts");
     posts.forEach(post => {
       const li = document.createElement("li");
-      li.innerHTML = `<strong>${post.title}</strong><br>${post.summary}<br><small>${post.date}</small><hr>`;
+      li.classList.add("post");
+      li.innerHTML = `
+        <h2>${post.title}</h2>
+        <p>${post.summary}</p>
+        <small>Publicado em: ${new Date(post.date).toLocaleDateString()}</small>
+      `;
       ul.appendChild(li);
     });
   })

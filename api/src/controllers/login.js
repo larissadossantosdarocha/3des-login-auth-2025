@@ -3,11 +3,13 @@ const crypto = require('node:crypto');
 
 const Login = (req, res) => {
     const { user, psw } = req.body;
-    
+
     try {
         const correctPassword = ((user === process.env.USER) && (psw === process.env.PASSWD));
 
-        if(!correctPassword) res.status(401).send({message:'E-mail or Password incorrect !'});
+        if (!correctPassword) {
+            return res.status(401).send({ message: 'E-mail or Password incorrect !' });
+        }
 
         const token = jsonwebtoken.sign(
             {
@@ -19,12 +21,10 @@ const Login = (req, res) => {
             { expiresIn: "2min" }
         );
 
-        res.status(200).json({ token : token }).end();
-    }catch(err) {
+        return res.status(200).json({ token: token }).end();
+    } catch (err) {
         res.status(500).send(err).end();
     }
-    
-    res.status(200).end();
 };
 
 module.exports = {
